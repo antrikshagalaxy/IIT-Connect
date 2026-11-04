@@ -1,0 +1,283 @@
+/* IIT Connect Admin Design System */
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #EAF3FB;
+  --bg-subtle: #F6F9FD;
+  --bg-hover: #DFEDFA;
+  
+  --text-main: #1F3A52;
+  --text-secondary: #4D6475;
+  --text-muted: #738A9C;
+  --text-inverse: #FFFFFF;
+
+  --accent-primary: #4A90C2;
+  --accent-hover: #3B7BA8;
+  --accent-active: #2F648B;
+  --accent-subtle: #D6E8F7;
+
+  --border-light: #D6E5F3;
+  --border-subtle: #E3EDF6;
+  --border-focus: #4A90C2;
+
+  --status-pending-bg: #FFF8E6;
+  --status-pending-text: #8A6400;
+  --status-pending-border: #F3E0A9;
+
+  --status-confirmed-bg: #EAF7EE;
+  --status-confirmed-text: #1B6E32;
+  --status-confirmed-border: #BCE4C7;
+
+  --status-cancelled-bg: #F8F9FA;
+  --status-cancelled-text: #5A6570;
+  --status-cancelled-border: #DDE2E6;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --shadow-sm: 0 1px 2px rgba(31, 58, 82, 0.05);
+  --shadow-md: 0 2px 6px rgba(31, 58, 82, 0.07);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --touch-target: 44px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0 4rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.925rem;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: var(--text-inverse);
+  border-color: var(--accent-primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  border-color: var(--border-light);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-primary);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--bg-secondary);
+}
+
+.btn-danger {
+  background-color: #FFFFFF;
+  color: #B42318;
+  border-color: #FDA29B;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #FEF3F2;
+  border-color: #B42318;
+}
+
+.btn-sm {
+  min-height: 36px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 0.375rem;
+}
+
+.form-control {
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: 0.625rem 0.875rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-main);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(74, 144, 194, 0.15);
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge-accent {
+  background-color: #E2EEF8;
+  color: #1F3A52;
+  border-color: #C8DFEE;
+}
+
+.badge-status {
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.badge-status.pending_payment {
+  background-color: var(--status-pending-bg);
+  color: var(--status-pending-text);
+  border: 1px solid var(--status-pending-border);
+}
+
+.badge-status.confirmed {
+  background-color: var(--status-confirmed-bg);
+  color: var(--status-confirmed-text);
+  border: 1px solid var(--status-confirmed-border);
+}
+
+.badge-status.completed {
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+}
+
+.badge-status.cancelled {
+  background-color: var(--status-cancelled-bg);
+  color: var(--status-cancelled-text);
+  border: 1px solid var(--status-cancelled-border);
+}
+
+/* Alerts */
+.alert {
+  padding: 0.875rem 1.125rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid transparent;
+}
+
+.alert-error {
+  background-color: #FEF3F2;
+  color: #912018;
+  border-color: #FECDCA;
+}
+
+.alert-success {
+  background-color: #EDF7EE;
+  color: #1E5E2E;
+  border-color: #C2E3C9;
+}
+
+.alert-info {
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+  border-color: var(--border-light);
+}

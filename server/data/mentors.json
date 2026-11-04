@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Arjun Sharma",
+    "iit": "IIT Bombay",
+    "branch": "Computer Science & Engineering",
+    "year": "3rd Year B.Tech",
+    "exams": ["JEE Advanced", "JEE Mains"],
+    "subjects": ["Mathematics", "Physics", "Programming"],
+    "languages": ["Hindi", "English"],
+    "bio": "Secured AIR 47 in JEE Advanced 2023. Passionate about helping students break down difficult concepts in Maths and Physics. Mentored 20+ students in the past year.",
+    "pricePerSession": 599,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 1, "slots": ["10:00", "11:00", "16:00", "17:00"] },
+      { "day": 3, "slots": ["10:00", "11:00", "16:00", "17:00"] },
+      { "day": 5, "slots": ["10:00", "11:00", "14:00", "15:00"] },
+      { "day": 6, "slots": ["09:00", "10:00", "11:00", "14:00", "15:00"] }
+    ]
+  },
+  {
+    "name": "Priya Nair",
+    "iit": "IIT Madras",
+    "branch": "Electrical Engineering",
+    "year": "2nd Year B.Tech",
+    "exams": ["JEE Advanced", "JEE Mains", "GATE"],
+    "subjects": ["Physics", "Mathematics", "Circuit Theory"],
+    "languages": ["Tamil", "English", "Hindi"],
+    "bio": "AIR 112 in JEE Advanced 2024. Specialises in building strong fundamentals in Physics and helping students crack tricky problems. Also guides GATE aspirants in core EE subjects.",
+    "pricePerSession": 549,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 2, "slots": ["10:00", "11:00", "15:00", "16:00"] },
+      { "day": 4, "slots": ["10:00", "11:00", "15:00", "16:00"] },
+      { "day": 6, "slots": ["09:00", "10:00", "11:00", "14:00"] }
+    ]
+  },
+  {
+    "name": "Rahul Verma",
+    "iit": "IIT Delhi",
+    "branch": "Mechanical Engineering",
+    "year": "4th Year B.Tech",
+    "exams": ["JEE Advanced", "JEE Mains", "GATE"],
+    "subjects": ["Mathematics", "Physics", "Thermodynamics", "Mechanics"],
+    "languages": ["Hindi", "English"],
+    "bio": "AIR 203 in JEE Advanced 2022. Currently preparing for GATE Mechanical. Has guided 30+ students through tough Maths and Physics problems. Loves making complex topics simple.",
+    "pricePerSession": 649,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 1, "slots": ["09:00", "10:00", "17:00", "18:00"] },
+      { "day": 3, "slots": ["09:00", "10:00", "17:00", "18:00"] },
+      { "day": 6, "slots": ["10:00", "11:00", "12:00", "15:00"] }
+    ]
+  },
+  {
+    "name": "Sneha Krishnan",
+    "iit": "IIT Kharagpur",
+    "branch": "Chemistry (5-Year Integrated)",
+    "year": "3rd Year Int. M.Sc.",
+    "exams": ["JEE Advanced", "JEE Mains", "NEET"],
+    "subjects": ["Chemistry", "Biology", "Mathematics"],
+    "languages": ["Telugu", "English", "Hindi"],
+    "bio": "AIR 89 in JEE Advanced 2023. Expert in Organic and Physical Chemistry. Has helped both JEE and NEET aspirants understand reaction mechanisms and scoring high in Chemistry.",
+    "pricePerSession": 599,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 2, "slots": ["11:00", "12:00", "16:00", "17:00"] },
+      { "day": 4, "slots": ["11:00", "12:00", "16:00", "17:00"] },
+      { "day": 0, "slots": ["10:00", "11:00", "14:00", "15:00", "16:00"] }
+    ]
+  },
+  {
+    "name": "Vikram Singh",
+    "iit": "IIT Roorkee",
+    "branch": "Civil Engineering",
+    "year": "2nd Year B.Tech",
+    "exams": ["JEE Advanced", "JEE Mains"],
+    "subjects": ["Mathematics", "Physics"],
+    "languages": ["Hindi", "English", "Punjabi"],
+    "bio": "AIR 156 in JEE Advanced 2024. Specialises in Calculus, Coordinate Geometry and Mechanics. Known for his patient teaching approach and step-by-step problem solving method.",
+    "pricePerSession": 549,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 1, "slots": ["14:00", "15:00", "16:00"] },
+      { "day": 3, "slots": ["14:00", "15:00", "16:00"] },
+      { "day": 5, "slots": ["11:00", "12:00", "14:00", "15:00", "16:00"] }
+    ]
+  },
+  {
+    "name": "Ananya Gupta",
+    "iit": "IIT Kanpur",
+    "branch": "Physics (5-Year Integrated)",
+    "year": "4th Year Int. M.Sc.",
+    "exams": ["JEE Advanced", "JEE Mains", "NEET"],
+    "subjects": ["Physics", "Mathematics", "Physical Chemistry"],
+    "languages": ["Hindi", "English"],
+    "bio": "AIR 74 in JEE Advanced 2022. Passionate physicist who simplifies Modern Physics, Optics and Electrostatics for JEE and NEET students. Has cleared all chapters across both exams.",
+    "pricePerSession": 649,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 2, "slots": ["09:00", "10:00", "17:00", "18:00"] },
+      { "day": 4, "slots": ["09:00", "10:00", "17:00", "18:00"] },
+      { "day": 0, "slots": ["11:00", "12:00", "14:00", "15:00"] }
+    ]
+  },
+  {
+    "name": "Karthik Subramaniam",
+    "iit": "IIT BHU Varanasi",
+    "branch": "Electronics & Communication",
+    "year": "3rd Year B.Tech",
+    "exams": ["JEE Advanced", "JEE Mains", "GATE"],
+    "subjects": ["Physics", "Mathematics", "Electronics"],
+    "languages": ["Tamil", "English", "Hindi"],
+    "bio": "AIR 231 in JEE Advanced 2023. Specialises in Wave Optics, Electrostatics and Signals & Systems. Guides GATE ECE aspirants in core subjects alongside JEE preparation mentoring.",
+    "pricePerSession": 549,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 1, "slots": ["11:00", "12:00", "15:00", "16:00"] },
+      { "day": 3, "slots": ["11:00", "12:00", "15:00", "16:00"] },
+      { "day": 6, "slots": ["09:00", "10:00", "11:00", "13:00", "14:00"] }
+    ]
+  },
+  {
+    "name": "Meera Patel",
+    "iit": "IIT Guwahati",
+    "branch": "Biotechnology",
+    "year": "2nd Year B.Tech",
+    "exams": ["NEET", "JEE Mains"],
+    "subjects": ["Biology", "Chemistry", "Physics"],
+    "languages": ["Gujarati", "English", "Hindi"],
+    "bio": "NEET 2024 rank 143. The only mentor specialising in Biology and NEET strategy. Expert in NCERT-based questions, Genetics, Human Physiology and exam time management.",
+    "pricePerSession": 599,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 2, "slots": ["12:00", "13:00", "16:00", "17:00"] },
+      { "day": 5, "slots": ["10:00", "11:00", "12:00", "15:00", "16:00"] },
+      { "day": 0, "slots": ["09:00", "10:00", "11:00", "14:00"] }
+    ]
+  },
+  {
+    "name": "Rohit Agarwal",
+    "iit": "IIT Hyderabad",
+    "branch": "Computer Science & Engineering",
+    "year": "4th Year B.Tech",
+    "exams": ["JEE Advanced", "JEE Mains", "GATE"],
+    "subjects": ["Mathematics", "Data Structures", "Algorithms", "Computer Science"],
+    "languages": ["Hindi", "English", "Telugu"],
+    "bio": "AIR 318 in JEE Advanced 2022. Expert in Discrete Maths, Algorithms and Programming for GATE CS. Loves competitive programming and helps students build systematic problem-solving skills.",
+    "pricePerSession": 599,
+    "photoUrl": "",
+    "isActive": true,
+    "sessionDurationMins": 45,
+    "availability": [
+      { "day": 1, "slots": ["18:00", "19:00", "20:00"] },
+      { "day": 3, "slots": ["18:00", "19:00", "20:00"] },
+      { "day": 5, "slots": ["18:00", "19:00", "20:00"] },
+      { "day": 0, "slots": ["10:00", "11:00", "14:00", "15:00", "16:00"] }
+    ]
+  }
+]
+

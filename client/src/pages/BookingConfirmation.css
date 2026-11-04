@@ -1,0 +1,154 @@
+.confirmation-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.confirmation-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-status-pill {
+  display: inline-block;
+  background-color: var(--status-pending-bg);
+  color: var(--status-pending-text);
+  border: 1px solid var(--status-pending-border);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.confirmation-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Booking Code Display */
+.code-display-box {
+  background-color: var(--bg-secondary);
+  border: 1px dashed var(--accent-primary);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin: 1.5rem auto 2rem;
+  max-width: 360px;
+}
+
+.code-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.code-value {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-main);
+  font-family: monospace;
+}
+
+.code-copy-btn {
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+  cursor: pointer;
+  background-color: var(--bg-primary);
+}
+
+.code-copy-btn:hover {
+  background-color: var(--bg-subtle);
+}
+
+/* Pay Now Action Card */
+.pay-action-card {
+  background-color: #F4F9FD;
+  border: 1px solid #CFE2F3;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.pay-action-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.pay-action-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.pay-steps-list {
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.25rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pay-steps-list strong {
+  color: var(--accent-primary);
+}
+
+/* Details Table */
+.details-card {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.details-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: var(--text-secondary);
+}
+
+.detail-val {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}

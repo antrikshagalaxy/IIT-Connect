@@ -1,0 +1,321 @@
+/* Home Page Styles */
+
+/* Hero */
+.hero-section {
+  padding: 3rem 0 3.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  max-width: 780px;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  max-width: 650px;
+}
+
+.metric-item strong {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.metric-item span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+/* 3-Step Process */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.step-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--accent-primary);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.step-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Mentors Preview Grid */
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.mentor-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s ease;
+}
+
+.mentor-card:hover {
+  border-color: var(--accent-primary);
+}
+
+.mentor-card-top {
+  margin-bottom: 1.25rem;
+}
+
+.mentor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.mentor-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.mentor-iit-badge {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.mentor-branch {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.mentor-year {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.mentor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.mentor-bio {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.mentor-meta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.mentor-meta strong {
+  color: var(--text-main);
+}
+
+.mentor-card-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.mentor-price-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.mentor-price-amount {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.mentor-price-unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.section-footer-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-primary);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1.125rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: var(--touch-target);
+}
+
+.faq-question:hover {
+  background-color: var(--bg-subtle);
+}
+
+.faq-toggle-icon {
+  font-size: 1.25rem;
+  color: var(--accent-primary);
+  font-weight: 400;
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .steps-grid,
+  .mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .steps-grid,
+  .mentors-grid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 2.75rem 0;
+  }
+}
