@@ -1,0 +1,10 @@
+{
+  "name": "iit-connect-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm start --prefix server",
+    "build": "npm install --prefix server",
+    "postinstall": "npm install --prefix server"
+  }
+}
