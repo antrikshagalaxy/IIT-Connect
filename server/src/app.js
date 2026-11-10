@@ -87,8 +87,10 @@ app.get('/api/v1/config', (req, res) => {
   });
 });
 
-// Health check
+// Health check and root ping
+app.get('/', (req, res) => res.json({ success: true, message: 'IIT Connect API is online' }));
 app.get('/api/health', (req, res) => res.json({ success: true, message: 'IIT Connect API is running' }));
+app.get('/api/v1/health', (req, res) => res.json({ success: true, message: 'IIT Connect API v1 is running' }));
 
 // 404 and error handler
 app.use(notFound);
