@@ -14,20 +14,33 @@ const app = express();
 app.use(helmet());
 
 // CORS - allow both public client and separate admin panel
-const allowedOrigins = [
-  process.env.CLIENT_URL || 'http://localhost:5173',
-  process.env.ADMIN_CLIENT_URL || 'http://localhost:5174',
+const rawAllowed = [
+  process.env.CLIENT_URL,
+  process.env.ADMIN_CLIENT_URL,
   'http://localhost:5173',
   'http://localhost:5174'
-];
+].filter(Boolean);
+
+// Split comma-separated URLs and trim trailing slashes
+const allowedOrigins = rawAllowed.flatMap(u => 
+  u.split(',').map(item => item.trim().replace(/\/+$/, ''))
+);
 
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin) || /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(origin)) {
+    const normalizedOrigin = origin.replace(/\/+$/, '');
+    if (
+      allowedOrigins.includes('*') ||
+      allowedOrigins.includes(normalizedOrigin) ||
+      /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(normalizedOrigin) ||
+      /\.vercel\.app$/.test(normalizedOrigin) ||
+      /\.onrender\.com$/.test(normalizedOrigin)
+    ) {
       return callback(null, true);
     }
-    callback(new Error('Not allowed by CORS'));
+    console.warn(`[CORS Blocked] Origin: ${origin}. Allowed:`, allowedOrigins);
+    callback(new Error(`Not allowed by CORS: ${origin}`));
   },
   credentials: true
 }));
