@@ -400,9 +400,7 @@ export default function BookSession() {
                     <option value="">Select Target Exam</option>
                     <option value="JEE Advanced">JEE Advanced</option>
                     <option value="JEE Mains">JEE Mains</option>
-                    <option value="NEET">NEET</option>
-                    <option value="GATE">GATE</option>
-                    <option value="Other">Other Engineering / Medical Entrance</option>
+                    <option value="Other">Other Engineering Entrance</option>
                   </select>
                   {formErrors.exam && <p className="form-error">{formErrors.exam}</p>}
                 </div>

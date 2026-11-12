@@ -13,7 +13,7 @@ export default function Footer() {
               Get practical guidance directly from current IITians who cracked the exams.
             </p>
             <div className="footer-contact">
-              Support email: <a href="mailto:contact@iitconnect.in">contact@iitconnect.in</a>
+              Support email: <a href="mailto:antrikshaaman@gmail.com">antrikshaaman@gmail.com</a>
             </div>
           </div>
 

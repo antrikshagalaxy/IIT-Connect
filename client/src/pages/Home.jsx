@@ -28,7 +28,7 @@ export default function Home() {
   const faqs = [
     {
       q: 'Who are the mentors on IIT Connect?',
-      a: 'All our mentors are currently enrolled undergraduate and integrated master students at top IITs (IIT Bombay, IIT Delhi, IIT Madras, etc.). Every mentor was ranked in the top percentiles in JEE Advanced, JEE Mains, NEET, or GATE.'
+      a: 'All our mentors are currently enrolled undergraduate and integrated master students at top IITs (IIT Bombay, IIT Delhi, IIT Madras, etc.). Every mentor was ranked in the top percentiles in JEE Advanced and JEE Mains.'
     },
     {
       q: 'Do students need to create an account or register?',
@@ -58,7 +58,7 @@ export default function Home() {
             1-on-1 Mentoring Sessions with Current IIT Students
           </h1>
           <p className="hero-lead">
-            For students at coaching institutes preparing for JEE, NEET, and GATE.
+            For students at coaching institutes preparing for JEE Advanced and JEE Mains.
             Book a focused 45-minute guidance session with a mentor who cleared the exact exam you are targeting.
           </p>
 

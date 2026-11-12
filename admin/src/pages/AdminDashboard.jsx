@@ -592,7 +592,7 @@ export default function AdminDashboard({ onLogout }) {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="JEE Advanced, JEE Mains, GATE"
+                  placeholder="JEE Advanced, JEE Mains"
                   value={mentorForm.exams}
                   onChange={(e) => setMentorForm({ ...mentorForm, exams: e.target.value })}
                 />

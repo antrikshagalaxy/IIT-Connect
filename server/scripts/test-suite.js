@@ -54,11 +54,11 @@ async function runTests() {
     console.log('✓ GET /mentors returned all 9 mentors without pagination');
 
     // Test exam filter
-    const neetRes = await fetch(`${baseUrl}/mentors?exam=NEET`).then(r => r.json());
-    if (!neetRes.success || neetRes.data.length === 0) {
-      throw new Error('GET /mentors?exam=NEET failed');
+    const jeeRes = await fetch(`${baseUrl}/mentors?exam=JEE`).then(r => r.json());
+    if (!jeeRes.success || jeeRes.data.length === 0) {
+      throw new Error('GET /mentors?exam=JEE failed');
     }
-    console.log(`✓ GET /mentors?exam=NEET filtered successfully (${neetRes.data.length} mentors)`);
+    console.log(`✓ GET /mentors?exam=JEE filtered successfully (${jeeRes.data.length} mentors)`);
 
     // Pick first mentor
     const testMentor = mentorsRes.data[0];

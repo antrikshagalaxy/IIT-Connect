@@ -4,10 +4,9 @@ import { api } from '../services/api';
 import './Mentors.css';
 
 const EXAM_FILTERS = [
-  { id: '', label: 'All Exams' },
-  { id: 'JEE', label: 'JEE (Main & Adv)' },
-  { id: 'NEET', label: 'NEET' },
-  { id: 'GATE', label: 'GATE' }
+  { id: '', label: 'All Mentors' },
+  { id: 'JEE Advanced', label: 'JEE Advanced' },
+  { id: 'JEE Mains', label: 'JEE Mains' }
 ];
 
 export default function Mentors() {

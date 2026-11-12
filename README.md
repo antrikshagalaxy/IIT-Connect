@@ -77,7 +77,7 @@ IIT Connect/
 | `EMAIL_USER` | *(Optional)* Gmail address for sending booking emails | `you@gmail.com` |
 | `EMAIL_PASS` | *(Optional)* Gmail App Password (16 characters) | `abcd efgh ijkl mnop` |
 | `EMAIL_FROM` | *(Optional)* Sender header | `IIT Connect <you@gmail.com>` |
-| `ADMIN_EMAIL`| *(Optional)* Email address to receive notifications | `admin@iitconnect.in` |
+| `ADMIN_EMAIL`| *(Optional)* Email address to receive notifications | `antrikshaaman@gmail.com` |
 | `NODE_ENV` | Environment mode (`development` or `production`) | `development` |
 
 ### Frontend (`/client/.env`)
