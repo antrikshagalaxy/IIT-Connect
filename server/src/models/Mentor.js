@@ -21,5 +21,7 @@ const mentorSchema = new mongoose.Schema({
   sessionDurationMins: { type: Number, default: 45 }
 }, { timestamps: true });
 
+mentorSchema.index({ isActive: 1, exams: 1 });
+
 export default mongoose.model('Mentor', mentorSchema);
 

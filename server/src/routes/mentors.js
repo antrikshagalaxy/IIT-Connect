@@ -7,11 +7,13 @@ const router = express.Router();
 // GET /mentors?exam=JEE
 router.get('/', async (req, res, next) => {
   try {
+    // Edge & CDN Cache: fast 60s cache with 5min stale-while-revalidate
+    res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
     const filter = { isActive: true };
     if (req.query.exam) {
       filter.exams = { $elemMatch: { $regex: req.query.exam, $options: 'i' } };
     }
-    const mentors = await Mentor.find(filter).select('-__v');
+    const mentors = await Mentor.find(filter).select('-__v').lean();
     res.json({ success: true, data: mentors });
   } catch (err) { next(err); }
 });
@@ -19,7 +21,8 @@ router.get('/', async (req, res, next) => {
 // GET /mentors/:id
 router.get('/:id', async (req, res, next) => {
   try {
-    const mentor = await Mentor.findById(req.params.id).select('-__v');
+    res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
+    const mentor = await Mentor.findById(req.params.id).select('-__v').lean();
     if (!mentor || !mentor.isActive) return res.status(404).json({ success: false, message: 'Mentor not found' });
     res.json({ success: true, data: mentor });
   } catch (err) { next(err); }

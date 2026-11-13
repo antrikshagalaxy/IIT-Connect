@@ -4,8 +4,9 @@ import { api } from '../services/api';
 import './Home.css';
 
 export default function Home() {
-  const [mentors, setMentors] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const cached = api.getCachedMentors();
+  const [mentors, setMentors] = useState(cached ? cached.slice(0, 3) : []);
+  const [loading, setLoading] = useState(!cached || cached.length === 0);
   const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {

@@ -13,13 +13,23 @@ export default function Mentors() {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentExam = searchParams.get('exam') || '';
 
-  const [mentors, setMentors] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const initialCached = api.getCachedMentors(currentExam);
+  const [mentors, setMentors] = useState(initialCached || []);
+  const [loading, setLoading] = useState(!initialCached || initialCached.length === 0);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
+    // If we have cached mentors for this filter, display immediately
+    const cached = api.getCachedMentors(currentExam);
+    if (cached && cached.length > 0) {
+      setMentors(cached);
+      setLoading(false);
+    } else {
+      setLoading(true);
+    }
     setError(null);
+
+    // Always fetch fresh data silently in background (Stale While Revalidate)
     api.getMentors(currentExam)
       .then(res => {
         if (res?.data) {
@@ -27,7 +37,9 @@ export default function Mentors() {
         }
       })
       .catch(err => {
-        setError(err.message || 'Failed to load mentors');
+        if (!cached || cached.length === 0) {
+          setError(err.message || 'Failed to load mentors');
+        }
       })
       .finally(() => setLoading(false));
   }, [currentExam]);

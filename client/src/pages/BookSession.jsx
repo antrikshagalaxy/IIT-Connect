@@ -35,8 +35,9 @@ export default function BookSession() {
   const { mentorId } = useParams();
   const navigate = useNavigate();
 
-  const [mentor, setMentor] = useState(null);
-  const [loadingMentor, setLoadingMentor] = useState(true);
+  const cachedMentor = api.getCachedMentor(mentorId);
+  const [mentor, setMentor] = useState(cachedMentor || null);
+  const [loadingMentor, setLoadingMentor] = useState(!cachedMentor);
   const [mentorError, setMentorError] = useState(null);
 
   const availableDates = getNext14Days();
@@ -51,7 +52,7 @@ export default function BookSession() {
     name: '',
     email: '',
     phone: '',
-    exam: '',
+    exam: cachedMentor?.exams?.[0] || '',
     classOrYear: '',
     institute: '',
     city: '',
@@ -62,22 +63,26 @@ export default function BookSession() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
 
-  // Fetch mentor details
+  // Fetch mentor details (refresh in background)
   useEffect(() => {
-    setLoadingMentor(true);
+    if (!cachedMentor) {
+      setLoadingMentor(true);
+    }
     setMentorError(null);
     api.getMentor(mentorId)
       .then(res => {
         if (res?.data) {
           setMentor(res.data);
           // Set default exam from mentor's list if available
-          if (res.data.exams?.length > 0) {
+          if (res.data.exams?.length > 0 && !formData.exam) {
             setFormData(prev => ({ ...prev, exam: res.data.exams[0] }));
           }
         }
       })
       .catch(err => {
-        setMentorError(err.message || 'Mentor not found or unavailable');
+        if (!cachedMentor) {
+          setMentorError(err.message || 'Mentor not found or unavailable');
+        }
       })
       .finally(() => setLoadingMentor(false));
   }, [mentorId]);

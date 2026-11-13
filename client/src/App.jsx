@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { api } from './services/api';
 
 import Home from './pages/Home';
 import Mentors from './pages/Mentors';
@@ -24,6 +26,11 @@ function NotFound() {
 }
 
 export default function App() {
+  // Pre-fetch mentors on initial load so navigation to mentors is instantaneous
+  useEffect(() => {
+    api.getMentors().catch(() => {});
+  }, []);
+
   return (
     <Router>
       <Navbar />
